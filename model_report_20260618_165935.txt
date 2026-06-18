@@ -1,0 +1,36 @@
+============================================================
+GPS SPOOFING DETECTOR - MODEL REPORT
+============================================================
+
+Date: 2026-06-18 16:59:37
+Dataset: AV-GPS-Dataset-1.csv
+Total Records: 62042
+
+MODELS USED:
+  • Random Forest
+  • Neural Network
+  • Hist Gradient Boosting
+
+ENSEMBLE PERFORMANCE:
+  Training Accuracy:   99.19%
+  Testing Accuracy:    98.36%
+  CV Accuracy:         98.19%
+  Precision:           97.38%
+  Recall:              96.14%
+  F1-Score:            96.76%
+
+[TARGET ACHIEVED] Accuracy >97%
+
+TOP FEATURES (13 total):
+   1. sat_count
+   2. sat_locks
+   3. sat_ratio
+   4. sat_discrepancy
+   5. velocity
+   6. velocity_diff
+   7. heading_abs_diff
+   8. velocity_mean_5
+   9. velocity_std_5
+  10. sat_count_mean_5
+
+============================================================

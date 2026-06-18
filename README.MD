@@ -15,6 +15,46 @@ The final model uses Soft Voting Ensemble Learning to improve robustness and gen
 
 ---
 
+## Project Structure
+
+```text
+GPS-Spoofing-Detector/
+│
+├── README.md
+├── requirements.txt
+├── PROJECT_1.py
+├── AV-GPS-Dataset-1.csv
+├── gps_predictions_20260618_165935.csv
+├── model_report_20260618_165935.txt
+|
+├── Documents/
+│   ├── Model_documentation.md
+│   ├── Feature_engineering.md
+│   ├── Results_analysis.md
+|   ├── Security Threats on the Electronic Bracelets for the Convicts in Jordan.pdf
+│
+├── plots/
+|   ├── confusion_matrix_full_dataset.png
+|   ├── confusion_matrix_test_set.png
+|   ├── feature_importance.csv
+|   ├── feature_importance.png
+|   ├── model_performance.png
+|
+├── models/
+|   ├── best_hist_gradient_boosting_20260618_165935.pkl
+|   ├── ensemble_model_20260618_165935.pkl
+|   ├── preprocessing_20260618_165935.pkl
+|   
+
+```
+
+---
+
+## Installation
+
+```bash
+pip install -r requirements.txt
+```
 ## Motivation
 
 GPS Spoofing is one of the most dangerous attacks targeting navigation systems. Attackers can transmit counterfeit GPS signals that mislead vehicles, drones, or tracking devices into believing they are located somewhere else.
