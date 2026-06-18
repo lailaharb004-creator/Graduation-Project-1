@@ -5,8 +5,7 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.metrics import accuracy_score, confusion_matrix, classification_report, precision_recall_fscore_support
-from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier,HistGradientBoostingClassifier, ExtraTreesClassifier, VotingClassifier
-from sklearn.svm import SVC
+from sklearn.ensemble import RandomForestClassifier, HistGradientBoostingClassifier, VotingClassifier
 from sklearn.model_selection import train_test_split, cross_val_score, StratifiedKFold
 from sklearn.preprocessing import StandardScaler, PowerTransformer
 from sklearn.impute import SimpleImputer
@@ -68,6 +67,7 @@ class GPSDetectorOptimized:
         self.normalizer = PowerTransformer(method='yeo-johnson')
         self.imputer = SimpleImputer(strategy='median')
         self.feature_names = []
+        self.sorted_features = []
         
         self.performance = {
             'train_accuracy': 0, 
@@ -401,7 +401,9 @@ class GPSDetectorOptimized:
                 'Importance': importances,
                 'Importance_%': importances * 100
             }).sort_values('Importance_%', ascending=False)
-            
+
+            self.sorted_features = feat_imp['Feature'].tolist()
+
             print(f"\nTOP 10 MOST IMPORTANT FEATURES:")
             print("-" * 50)
             for idx, row in feat_imp.head(10).iterrows():
@@ -558,8 +560,9 @@ class GPSDetectorOptimized:
                 f.write(f"   Current: {self.performance['test_accuracy']*100:.2f}%\n")
                 f.write(f"   Target:  97.00%\n")
             
-            f.write(f"\nTOP FEATURES ({len(self.feature_names)} total):\n")
-            for i, feat in enumerate(self.feature_names[:10], 1):
+            top_features = self.sorted_features if self.sorted_features else self.feature_names
+            f.write(f"\nTOP FEATURES BY IMPORTANCE ({len(self.feature_names)} total):\n")
+            for i, feat in enumerate(top_features[:10], 1):
                 f.write(f"  {i:2}. {feat}\n")
             
             f.write("\n" + "="*60 + "\n")

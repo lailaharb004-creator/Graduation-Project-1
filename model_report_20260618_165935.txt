@@ -21,16 +21,16 @@ ENSEMBLE PERFORMANCE:
 
 [TARGET ACHIEVED] Accuracy >97%
 
-TOP FEATURES (13 total):
-   1. sat_count
-   2. sat_locks
-   3. sat_ratio
-   4. sat_discrepancy
-   5. velocity
-   6. velocity_diff
-   7. heading_abs_diff
-   8. velocity_mean_5
+TOP FEATURES BY IMPORTANCE (13 total):
+   1. velocity_mean_5
+   2. velocity
+   3. sat_ratio_mean_5
+   4. heading_abs_diff
+   5. sat_count_mean_5
+   6. sat_ratio
+   7. sat_count
+   8. sat_discrepancy
    9. velocity_std_5
-  10. sat_count_mean_5
+  10. sat_locks
 
 ============================================================

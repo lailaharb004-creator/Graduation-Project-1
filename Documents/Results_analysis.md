@@ -82,13 +82,13 @@ Structure:
 
 The Random Forest model identifies the most influential features.
 
-Examples:
+Most influential features (from `plots/feature_importance.csv`):
 
 ```text
-sat_ratio
+velocity_mean_5
+velocity
+sat_ratio_mean_5
 heading_abs_diff
-velocity_diff
-sat_discrepancy
 ```
 
 ---

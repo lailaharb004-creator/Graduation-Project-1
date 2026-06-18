@@ -18,7 +18,7 @@ The final model uses Soft Voting Ensemble Learning to improve robustness and gen
 ## Project Structure
 
 ```text
-GPS-Spoofing-Detector/
+Graduation-Project-1/
 │
 ├── README.md
 ├── requirements.txt
@@ -31,7 +31,7 @@ GPS-Spoofing-Detector/
 │   ├── Model_documentation.md
 │   ├── Feature_engineering.md
 │   ├── Results_analysis.md
-|   ├── Security Threats on the Electronic Bracelets for the Convicts in Jordan.pdf
+│   ├── Security Threats on the Electronic Bracelets for the Convicts in Jordan.pdf
 │
 ├── plots/
 |   ├── confusion_matrix_full_dataset.png
@@ -576,15 +576,15 @@ Used to identify:
 
 Feature importance is extracted from the Random Forest model.
 
-Example important features:
+Most important features (from `plots/feature_importance.csv`):
 
 ```text
-sat_ratio
+velocity_mean_5
+velocity
+sat_ratio_mean_5
 heading_abs_diff
-velocity_diff
-sat_discrepancy
 sat_count_mean_5
-velocity_std_5
+sat_ratio
 ```
 
 This analysis helps explain model decisions and identify the most influential GPS indicators.
