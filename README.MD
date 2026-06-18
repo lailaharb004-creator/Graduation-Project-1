@@ -724,3 +724,8 @@ This project provides a complete Machine Learning-based GPS Spoofing Detection F
 By combining Random Forest, MLP Neural Networks, and Hist Gradient Boosting within a Soft Voting Ensemble, the system achieves highly accurate classification while generating detailed analytics, visualizations, prediction reports, and deployable trained models.
 
 The framework is suitable for research, intelligent transportation systems, autonomous vehicles, UAV security, and GPS anomaly detection applications.
+
+---
+# Dataset Resources 
+
+AV-GPS-Dataset URL:https://github.com/mehrab-abrar/AV-GPS-Dataset
